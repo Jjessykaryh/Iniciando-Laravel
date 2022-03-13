@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/inicio', function () {
     return view('principal.inicio');
 })->name('principal');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function (){
+    return view('user/profile');
+})->name('dashboard');
